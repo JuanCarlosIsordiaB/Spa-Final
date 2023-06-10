@@ -1,0 +1,46 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    margin-top: 4rem;
+    text-align: center;
+
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__widget{
+        padding: 4rem;
+
+        //Centrar las redes sociales
+        &:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__heading{
+        @include m.heading;
+        font-size: 3.4rem;
+    }
+
+    &__texto{
+        line-height: 1.9;
+    }
+    
+    &__copyright{
+        text-align: center;
+        max-width: 120rem;
+        padding: 2rem;
+        margin: 2rem auto 0 auto;
+        border-top: 1px solid darken(v.$grisClaro, 10%);
+        color: v.$gris;
+        font-size: 1.7rem;
+    }
+
+
+}
+
